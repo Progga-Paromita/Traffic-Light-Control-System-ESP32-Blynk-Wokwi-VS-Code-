@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "author": "Assignment-1",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-text",
+      "id": "roll_label",
+      "top": -140,
+      "left": 0,
+      "attrs": {
+        "text": "Roll - 2207030",
+        "size": "32"
+      }
+    },
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_red",
+      "top": -80,
+      "left": 140,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_yellow",
+      "top": 0,
+      "left": 140,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_green",
+      "top": 80,
+      "left": 140,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_red",
+      "top": -80,
+      "left": 200,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_yellow",
+      "top": 0,
+      "left": 200,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_green",
+      "top": 80,
+      "left": 200,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:12",
+      "r_red:1",
+      "green",
+      []
+    ],
+    [
+      "esp:14",
+      "r_yellow:1",
+      "green",
+      []
+    ],
+    [
+      "esp:27",
+      "r_green:1",
+      "green",
+      []
+    ],
+    [
+      "r_red:2",
+      "led_red:A",
+      "green",
+      []
+    ],
+    [
+      "r_yellow:2",
+      "led_yellow:A",
+      "green",
+      []
+    ],
+    [
+      "r_green:2",
+      "led_green:A",
+      "green",
+      []
+    ],
+    [
+      "led_red:C",
+      "esp:GND",
+      "black",
+      []
+    ],
+    [
+      "led_yellow:C",
+      "esp:GND",
+      "black",
+      []
+    ],
+    [
+      "led_green:C",
+      "esp:GND",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
